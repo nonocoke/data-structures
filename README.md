@@ -16,17 +16,17 @@
 I hope this will be a good beginning for the changes.
 
 ## 目录
-1. [复杂度分析](./01-复杂度分析/README.md)
-2. [线性表](./02-线性表/README.md)
-<br>2.1 [数组](./02-线性表/2.1-array/README.md)
-<br>2.2 [链表](./02-线性表/2.2-linklist/README.md)
-<br>2.3 [栈](./02-线性表/2.3-stack/README.md)
-<br>2.4 [队列](./02-线性表/2.4-queue/README.md)
+1. [复杂度分析](./01-复杂度分析/)
+2. [线性表](./02-线性表/)
+<br>2.1 [数组](./02-线性表/2.1-array/)
+<br>2.2 [链表](./02-线性表/2.2-linklist/)
+<br>2.3 [栈](./02-线性表/2.3-stack/)
+<br>2.4 [队列](./02-线性表/2.4-queue/)
 3. 散列表
 4. 树
-<br>4.3 [二叉树](./README.md)
-<br>4.4 [红黑树](./README.md)
-<br>4.5 [堆](./README.md)
+<br>4.3 [二叉树](./)
+<br>4.4 [红黑树](./)
+<br>4.5 [堆](./)
 5. 图
 6. 递归
 7. 排序
@@ -36,7 +36,7 @@ I hope this will be a good beginning for the changes.
 11. 搜索
 12. 字符串匹配
 13. 基本算法思想
-<br>13.1 [贪心算法](./README.md)
-<br>13.2 [分治算法](./README.md)
-<br>13.3 [回溯算法](./README.md)
-<br>13.4 [动态规划](./README.md)
+<br>13.1 [贪心算法](./)
+<br>13.2 [分治算法](./)
+<br>13.3 [回溯算法](./)
+<br>13.4 [动态规划](./)
