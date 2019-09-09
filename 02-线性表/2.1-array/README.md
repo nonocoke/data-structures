@@ -11,8 +11,8 @@
 
 ## Leetcode
 
-- :star:[0977-squares-of-a-sorted-array](../../leetcode-go/0977.squares-of-a-sorted-array/)
-- :anger:[0078-subsets](../../leetcode-go/0078.subsets/)
-- :shit:[0128-longest-consecutive-sequence](../../leetcode-go/0128.longest-consecutive-sequence/)
+- :star:[0977-squares-of-a-sorted-array](https://github.com/zlinna/leetcode-go/tree/master/0977.squares-of-a-sorted-array/)
+- :anger:[0078-subsets](https://github.com/zlinna/leetcode-go/tree/master/0078.subsets/)
+- :shit:[0128-longest-consecutive-sequence](./)
 
 [>> 返回上一级](../) | [>> 返回主目录](../../)
