@@ -34,7 +34,8 @@
 
 ## Leetcode
 
-- :star:
+- :star:[0021.merge-two-sorted-lists](https://github.com/zlinna/leetcode-go/tree/master/0021.merge-two-sorted-lists)
+- :star:[0206.reverse-linked-list](https://github.com/zlinna/leetcode-go/tree/master/0206.reverse-linked-list)
 - :anger:
 - :shit:
 
