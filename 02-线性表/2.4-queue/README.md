@@ -43,7 +43,7 @@
 
 ## Leetcode
 
-- :star:[0346.moving-average-from-data-stream](https://github.com/zlinna/leetcode-go/tree/master/0346.moving-average-from-data-stream)
+- :star:
 - :anger:
 - :shit:
 
