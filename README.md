@@ -27,7 +27,7 @@ I hope this will be a good beginning for the changes.
 <br>4.3 [二叉树](./)
 <br>4.4 [红黑树](./)
 <br>4.5 [堆](./)
-5. 图
+5. [图](./05-图/)
 6. 递归
 7. 排序
 <br>7.1 插入排序
