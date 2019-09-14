@@ -30,8 +30,9 @@ I hope this will be a good beginning for the changes.
 5. [图](./05-图/)
 6. 递归
 7. 排序
-<br>7.1 插入排序
+<br>7.1 [冒泡、插入、选择排序]()
 <br>7.2 [拓扑排序](./)
+<br>7.3 [拓扑排序](./)
 8. 查找
 9. 跳表
 10. 哈希
