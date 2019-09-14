@@ -10,7 +10,7 @@
 
 
 1. [冒泡、插入、选择、希尔](#link1)
-2. [快速、归并](#link2)
+2. [归并、快速](#link2)
 3. [桶、计数、基数](#link3)
 
 
@@ -128,7 +128,7 @@ func ShellSort(a []int) {
 	}
 	// 步长 step ，选择 n/3
 	for step := size/3; step > 0; step /= 3 {
-		// // 遍历 步长 = step 后的所有数据，按 step 进行分组排序
+		// 遍历 步长 = step 后的所有数据，按 step 进行分组排序
 		for i := step; i < size; i++ {
 			// 按 step，数组从 j 到 0 进行交换，即 a[i] a[i-step] a[i-step-step] ... 进行比较
 			for j:= i - step; j >= 0; j -= step {
@@ -143,9 +143,119 @@ func ShellSort(a []int) {
 }
 ```
 
-<h2><span id="link12">2. 快速、归并</span></h2>
-#### 快速排序
+<h2><span id="link2">2. 归并、快速</span></h2>
 
+归并和快速排序用的都是分治思想，通过递归实现，过程相似。归并排序在于理解递推公式和 merge 函数。同理，快速排序是理解递推公式和 partition 函数
+![](../pictures/归并-快速排序.png)
 #### 归并排序
 
-<h2><span id="link12">3. 桶、计数、基数</span></h2>
+归并排序的思想就是先递归分解数组，排序后合并数组。
+
+将数组分解最小之后，然后合并2个有序数组，基本思路就是比较两个数组的最前面的数，
+谁小就先取谁，取了之后相应的指针往后移一位。然后再比较，直至一个数组为空，最后把另
+一个数组的剩余部分复制过来即可。
+
+* 归并排序不是原地排序算法，空间复杂度为O(n)
+* 不稳定的排序算法
+* 时间复杂度：最好O(nlogn)、最差O(nlogn)、平均O(nlogn)
+
+![](../pictures/归并排序.png)
+
+```go
+// MergeSort sort a to a increasing array.
+func MergeSort(a []int) {
+	size := len(a)
+	if size <= 1 {
+		return
+	}
+	mergeSort(a, 0, size-1)
+}
+
+func mergeSort(a []int, start, end int) {
+	// 递归终止条件
+	if start >= end {
+		return
+	}
+
+	mid := (start + end) / 2
+	// 分治递归
+	mergeSort(a, start, mid)
+	mergeSort(a, mid + 1, end)
+	// 将 a[start...mid] 和 a[mid=1...end] 合并为 a[start...end]
+	merge(a, start, mid, end)
+}
+
+func merge(a []int, start, mid, end int) {
+	tmpArray := make([]int, end-start+1)
+	i, j, k := start, mid + 1, 0
+	
+	for ; i <= mid && j <= end; k++ {
+		if a[i] < a[j] {
+			tmpArray[k] = a[i]
+			i ++
+		} else {
+			tmpArray[k] = a[j]
+			j ++
+		}
+	}
+
+	// 拷贝剩下的元素
+	for ; i <= mid; i++ {
+		tmpArray[k] = a[i]
+		k++
+	}
+	for ; j <= end; j++ {
+		tmpArray[k] = a[j]
+		k++
+	}
+	copy(a[start:end+1], tmpArray)
+}
+```
+
+#### 快速排序
+
+* 归并排序是原地排序算法，空间复杂度为O(1)
+* 不稳定的排序算法
+* 时间复杂度：最好O(n)、最差O(n^2)、平均O(nlogn)
+
+```go
+// QuickSort sort a to a increasing array.
+func QuickSort(a []int) {
+	size := len(a)
+	if size <= 1 {
+		return
+	}
+	separateSort(a, 0, size-1)
+}
+
+func separateSort(a []int, start, end int) {
+	if start >= end {
+		return
+	}
+	i := partition(a, start, end)
+	separateSort(a, start, i-1)
+	separateSort(a, i+1, end)
+}
+
+func partition(a []int, start, end int) int {
+	// 取最后一位当对比数字
+	pivot := a[end]
+
+	var i = start
+	for j := start; j < end; j++ {
+		if a[j] < pivot {
+			if i != j {
+				a[j], a[i] = a[i], a[j]
+			}
+			i ++
+		}
+	}
+	a[i], a[end] = a[end], a[i]
+	return i
+}
+```
+
+<h2><span id="link3">3. 桶、计数、基数</span></h2>
+
+...
+
