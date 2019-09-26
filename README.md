@@ -15,7 +15,7 @@
 # Why
 I hope this will be a good beginning for the changes.
 
-# When
+# Where
 选择数据结构和算法，往往需要综合各种因素，比如编码难度、维护成本、数据特征、数据规模等，最终选择最合适解，而非理论上的最优解。
 
 1. 时间、空间复杂度不能跟性能划等号
